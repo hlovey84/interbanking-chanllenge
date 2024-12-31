@@ -73,7 +73,7 @@ Esta capa implementa los detalles técnicos, como:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/interbanking-challenge.git](https://github.com/hlovey84/interbanking-chanllenge.git
+   git clone https://github.com/tu-usuario/interbanking-challenge.git](https://github.com/hlovey84/interbanking-chanllenge.git)
    cd interbanking-challenge
    ```
 
@@ -95,21 +95,20 @@ Esta capa implementa los detalles técnicos, como:
 - **URL:** `/companies/transfers`
 - **Descripción:** Devuelve una lista de empresas que realizaron transferencias en el último mes.
 
-### **2. Obtener Empresas Adheridas**
+### **2. Obtener Empresas Adheridas el ultimo mes**
 - **Método:** GET
-- **URL:** `/companies/new`
+- **URL:** `/company/joined-last-month`
 - **Descripción:** Devuelve una lista de empresas que se adhirieron en el último mes.
 
-### **3. Registrar una Nueva Empresa**
+### **3. Adherir una Nueva Empresa**
 - **Método:** POST
-- **URL:** `/companies`
+- **URL:** `/company`
 - **Body:**
 
    ```json
    {
-     "cuit": "12345678901",
-     "razonSocial": "Empresa Ejemplo",
-     "fechaAdhesion": "2024-12-01"
+     "cuit": "20309553498",
+	   "companyName": "SRL LO"
    }
    ```
 - **Descripción:** Registra la adhesión de una nueva empresa.
@@ -117,9 +116,12 @@ Esta capa implementa los detalles técnicos, como:
 ---
 
 ## Pruebas
-Ejecuta las pruebas con el siguiente comando:
+Ejecuta las pruebas con el siguiente comando: 
 
 ```bash
 pnpm run test
 ```
+
+### **4. Pendientes**
+Aunque no lo piden, concidero q es un tema importante de encarar la concurrendcia; haciendo uso del patron CQRS para separar las consultas de las operaciones de escritura, pero que por una cuestion de tiempo no logre exponerlo en esta solucion.
 
