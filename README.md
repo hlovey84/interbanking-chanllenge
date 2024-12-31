@@ -65,43 +65,26 @@ Esta capa implementa los detalles técnicos, como:
 ## Instalación y Ejecución
 
 ### Requisitos Previos
-- Node.js (v16 o superior)
-- Base de datos (relacional o no relacional configurada con Prisma)
+- Node.js (v18 o superior)
+- Base de datos (postgresql configurada con Prisma)
 
 ### Pasos
 
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/interbanking-challenge.git
+   git clone https://github.com/tu-usuario/interbanking-challenge.git](https://github.com/hlovey84/interbanking-chanllenge.git
    cd interbanking-challenge
    ```
 
-2. Instala las dependencias:
-
-   ```bash
-   npm install
+2. Generamos los contenedores de docker. Desde la carpeta raiz del proyecto:
+    ```bash
+   docker-compose build
+   docker-compose up -d
    ```
-
-3. Configura las variables de entorno:
-
-   Crea un archivo `.env` en el directorio raíz con los siguientes valores:
-
-   ```env
-   DATABASE_URL=tu_url_de_base_de_datos
-   ```
-
-4. Ejecuta las migraciones de la base de datos:
-
-   ```bash
-   npx prisma migrate dev
-   ```
-
-5. Inicia el servidor:
-
-   ```bash
-   npm run start:dev
-   ```
+3. ir a la documentacion de swagger
+   
+   http://localhost:3000/api#/
 
 ---
 
@@ -137,16 +120,6 @@ Esta capa implementa los detalles técnicos, como:
 Ejecuta las pruebas con el siguiente comando:
 
 ```bash
-npm run test
+pnpm run test
 ```
-
----
-
-## Contribuciones
-Las contribuciones son bienvenidas. Si deseas colaborar, abre un issue o envía un pull request.
-
----
-
-## Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
