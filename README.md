@@ -92,7 +92,7 @@ Esta capa implementa los detalles técnicos, como:
 
 ### **1. Obtener Empresas con Transferencias**
 - **Método:** GET
-- **URL:** `/companies/transfers`
+- **URL:** `/company/with-transfers-last-month`
 - **Descripción:** Devuelve una lista de empresas que realizaron transferencias en el último mes.
 
 ### **2. Obtener Empresas Adheridas el ultimo mes**
